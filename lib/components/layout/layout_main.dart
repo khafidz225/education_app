@@ -3,10 +3,15 @@ import 'package:get/get.dart';
 
 class LayoutMain extends StatelessWidget {
   const LayoutMain(
-      {this.title, required this.isOrange, required this.child, super.key});
+      {this.title,
+      required this.isOrange,
+      this.isBack,
+      required this.child,
+      super.key});
   final String? title;
   final Widget child;
   final bool isOrange;
+  final bool? isBack;
 
   @override
   Widget build(BuildContext context) {
@@ -83,7 +88,22 @@ class LayoutMain extends StatelessWidget {
               ),
             ),
           ),
-          Positioned(top: paddingTop + 180, child: child),
+          if (isBack == true)
+            Container(
+              margin: EdgeInsets.only(top: paddingTop + 10, left: 10),
+              child: InkWell(
+                onTap: () {
+                  Get.back();
+                },
+                child: const Icon(
+                  Icons.arrow_back_ios_new_sharp,
+                  color: Colors.white,
+                  size: 28,
+                ),
+              ),
+            ),
+          Container(
+              margin: EdgeInsets.only(top: paddingTop + 180), child: child),
         ],
       ),
     );

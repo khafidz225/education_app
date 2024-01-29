@@ -8,6 +8,9 @@ environment:
 dependencies:
   cupertino_icons: ^1.0.2
   get: 4.6.6
+  contacts_service: ^0.6.3
+  flutter_typeahead: ^4.6.2
+  permission_handler: ^10.4.3
   flutter:
     sdk: flutter
 

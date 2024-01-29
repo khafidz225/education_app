@@ -1,5 +1,7 @@
 import 'package:get/get.dart';
 
+import '../modules/contact_page/bindings/contact_page_binding.dart';
+import '../modules/contact_page/views/contact_page_view.dart';
 import '../modules/home/bindings/home_binding.dart';
 import '../modules/home/views/home_view.dart';
 import '../modules/list_card_page/bindings/list_card_page_binding.dart';
@@ -36,6 +38,11 @@ class AppPages {
       name: _Paths.LIST_CARD_PAGE,
       page: () => const ListCardPageView(),
       binding: ListCardPageBinding(),
+    ),
+    GetPage(
+      name: _Paths.CONTACT_PAGE,
+      page: () => const ContactPageView(),
+      binding: ContactPageBinding(),
     ),
   ];
 }

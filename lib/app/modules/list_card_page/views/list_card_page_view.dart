@@ -1,3 +1,4 @@
+import 'package:education_app/components/layout/bottom_navigator_bar_main.dart';
 import 'package:education_app/components/layout/layout_main.dart';
 import 'package:education_app/constant/constant_list.dart';
 import 'package:flutter/material.dart';
@@ -10,6 +11,7 @@ class ListCardPageView extends GetView<ListCardPageController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      bottomNavigationBar: const BottomNavigatorBarMain(),
       body: LayoutMain(
         title: 'Lorem Ipsum',
         isOrange: false,
